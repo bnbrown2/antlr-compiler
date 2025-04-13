@@ -35,5 +35,50 @@ class LangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LangParser#exprStmt.
+    def enterExprStmt(self, ctx:LangParser.ExprStmtContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#exprStmt.
+    def exitExprStmt(self, ctx:LangParser.ExprStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#MulDivExpr.
+    def enterMulDivExpr(self, ctx:LangParser.MulDivExprContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#MulDivExpr.
+    def exitMulDivExpr(self, ctx:LangParser.MulDivExprContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#ParensExpr.
+    def enterParensExpr(self, ctx:LangParser.ParensExprContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#ParensExpr.
+    def exitParensExpr(self, ctx:LangParser.ParensExprContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#IntExpr.
+    def enterIntExpr(self, ctx:LangParser.IntExprContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#IntExpr.
+    def exitIntExpr(self, ctx:LangParser.IntExprContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#AddSubExpr.
+    def enterAddSubExpr(self, ctx:LangParser.AddSubExprContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#AddSubExpr.
+    def exitAddSubExpr(self, ctx:LangParser.AddSubExprContext):
+        pass
+
+
 
 del LangParser

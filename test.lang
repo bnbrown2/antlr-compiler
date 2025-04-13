@@ -1,1 +1,4 @@
-print("Hello World");
+5 + 10 * 2;
+(3 + 2) * (7 - 4);
+(8 / 2)
+print("Arithmetic finished!");

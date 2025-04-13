@@ -24,5 +24,30 @@ class LangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by LangParser#exprStmt.
+    def visitExprStmt(self, ctx:LangParser.ExprStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#MulDivExpr.
+    def visitMulDivExpr(self, ctx:LangParser.MulDivExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#ParensExpr.
+    def visitParensExpr(self, ctx:LangParser.ParensExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#IntExpr.
+    def visitIntExpr(self, ctx:LangParser.IntExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#AddSubExpr.
+    def visitAddSubExpr(self, ctx:LangParser.AddSubExprContext):
+        return self.visitChildren(ctx)
+
+
 
 del LangParser
