@@ -8,21 +8,6 @@ class Interpreter(LangVisitor):
         print(text.strip('"'))
         return None
 
-    # arithmetic expression
-    def visitExprStmt(self, ctx):
-        result = self.visit(ctx.expr())
-        print(result)  # Display arithmetic expression result
-        return result
-
-
-    # integer 
-    def visitIntExpr(self, ctx):
-        return int(ctx.INT().getText())
-
-    # parentheses
-    def visitParensExpr(self, ctx):
-        return self.visit(ctx.expr())
-
     # multiplication and division 
     def visitMulDivExpr(self, ctx):
         leftSide = self.visit(ctx.expr(0))
@@ -31,8 +16,6 @@ class Interpreter(LangVisitor):
         if ctx.getChild(1).getText() == '*': # mult
             return leftSide * rightSide
         else:  # division
-            if rightSide == 0:
-                raise ValueError("Error: Division by zero")
             return leftSide / rightSide
 
 
@@ -45,3 +28,18 @@ class Interpreter(LangVisitor):
             return left + right
         else:  # subtraction
             return left - right
+        
+        
+        # expression
+    def visitExprStmt(self, ctx):
+        result = self.visit(ctx.expr())
+        print(result)
+        return result
+
+    # integer 
+    def visitIntExpr(self, ctx):
+        return int(ctx.INT().getText())
+
+    # parentheses
+    def visitParensExpr(self, ctx):
+        return self.visit(ctx.expr())

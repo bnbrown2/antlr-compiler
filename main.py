@@ -13,7 +13,7 @@ def main():
     parser = LangParser(token_stream) # create parser
     tree = parser.program()
 
-    # create interperater and execute 
+    # create interperater and exacute 
     visitor = Interpreter()
     visitor.visit(tree)
 
