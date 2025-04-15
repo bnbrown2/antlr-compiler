@@ -1,4 +1,35 @@
 5 + 10 * 2;
 (3 + 2) * (7 - 4);
-(8 / 2)
+(8 / 2);
 print("Successfully computed basic arithmatic. answers should be 25, 15, and 4");
+
+sin(30);
+print("Computed sin(30), should be 0.5");
+cos(30);
+print("Computed cos(30), should be 0.866");
+tan(45);
+print("Computed tan(45), should be 1");
+
+print("");
+for(i = 1; i <= 4; i = i + 1) {
+    i = i * 2;
+    i;
+}
+print("computed for loop:  i=i*2 for i <= 4, should produce result of 6 ");
+
+print("");
+i = 1;
+while(i <= 4) {
+    i = i + 1;
+    i;
+}
+print("Computed while loop: i=i+1 while i <= 4, should produce a result of 5");
+
+print("");
+x = 10;
+if(x > 5) {
+    print("Inside Print statement evaluated");
+    print("x =");
+    x;
+}
+print("Computed if statement, with condition 10 > 5. (Should Evaluate)");

@@ -29,8 +29,48 @@ class LangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by LangParser#assignment.
+    def visitAssignment(self, ctx:LangParser.AssignmentContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#ifStmt.
+    def visitIfStmt(self, ctx:LangParser.IfStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#forStmt.
+    def visitForStmt(self, ctx:LangParser.ForStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#whileStmt.
+    def visitWhileStmt(self, ctx:LangParser.WhileStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#condition.
+    def visitCondition(self, ctx:LangParser.ConditionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#comparisonOp.
+    def visitComparisonOp(self, ctx:LangParser.ComparisonOpContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by LangParser#MulDivExpr.
     def visitMulDivExpr(self, ctx:LangParser.MulDivExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#IdExpr.
+    def visitIdExpr(self, ctx:LangParser.IdExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#TanExpr.
+    def visitTanExpr(self, ctx:LangParser.TanExprContext):
         return self.visitChildren(ctx)
 
 
@@ -41,6 +81,16 @@ class LangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by LangParser#IntExpr.
     def visitIntExpr(self, ctx:LangParser.IntExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#SinExpr.
+    def visitSinExpr(self, ctx:LangParser.SinExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LangParser#CosExpr.
+    def visitCosExpr(self, ctx:LangParser.CosExprContext):
         return self.visitChildren(ctx)
 
 
