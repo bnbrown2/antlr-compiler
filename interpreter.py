@@ -2,7 +2,7 @@ import math
 from gen.LangVisitor import LangVisitor
 
 class Interpreter(LangVisitor):
-    # Dict to store vars
+    # Dict to store variables
     def __init__(self):
         self.variables = {}
 
@@ -42,7 +42,7 @@ class Interpreter(LangVisitor):
         value = self.visit(ctx.expr())
         return math.tan(math.radians(value))
 
-    # Vars
+    # variable
     def visitIdExpr(self, ctx):
         name = ctx.ID().getText()
         return self.variables.get(name)
