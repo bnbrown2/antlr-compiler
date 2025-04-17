@@ -1,7 +1,8 @@
-5 + 10 * 2;
+10 * 2;
 (3 + 2) * (7 - 4);
 (8 / 2);
-print("Successfully computed basic arithmatic. answers should be 25, 15, and 4");
+print("Successfully computed basic arithmatic.");
+print("answers should be 20, 15, and 4");
 
 sin(30);
 print("Computed sin(30), should be 0.5");
@@ -33,3 +34,6 @@ if(x > 5) {
     x;
 }
 print("Computed if statement, with condition 10 > 5. (Should Evaluate)");
+print("");
+
+print("We Can Print!");

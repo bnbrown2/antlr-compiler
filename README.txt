@@ -11,7 +11,7 @@ Requirements
 File contains 4 source code files that are non-antlr generated. 
 
 main.py: 
-the main program in the compiler. it is used to initialize all components, generate lexer and parser, create the parse tree, and interprete the code. 
+the main program in the compiler. it is used to initialize all components, generate lexer and parser, create the parse tree, and interpret the code. 
 
 interpreter.py: 
 This file defines how each part of the parse tree is interpreted. This is where all interpretation of the source program occurs.
@@ -23,4 +23,4 @@ test.lang
 This file contains the source code that the interpreter will run.
 
 gen directory: 
-this directory is full of files created by antlr in order for it to correctly process the input code.
+this directory is full of files created by antlr in order for it to correctly process the input code (Lexer, Parser, Visitor)

@@ -1,38 +1,62 @@
 grammar Lang;
-program: statement* EOF;
+
+program
+  : statement* EOF
+  ;
 
 statement
-    : printStmt ';'
-    | exprStmt ';'
-    | assignment ';'
-    | ifStmt
-    | forStmt
-    | whileStmt
-    ;
+  : printStmt ';'
+  | ifStmt
+  | assignment ';'
+  | exprStmt ';'
+  | whileStmt
+  | forStmt
+  ;
 
-printStmt: 'print' '(' STRING ')';
-exprStmt: expr;
+printStmt
+  : 'print' '(' STRING ')'
+  ;
 
-assignment: ID '=' expr;
-ifStmt: 'if' '(' condition ')' '{' statement* '}';
-forStmt: 'for' '(' assignment ';' condition ';' assignment ')' '{' statement* '}';
-whileStmt: 'while' '(' condition ')' '{' statement* '}';
-
-condition: expr comparisonOp expr;
-comparisonOp: '==' | '!=' | '<' | '<=' | '>' | '>=';
+exprStmt
+  : expr
+  ;
 
 expr
-    : expr ('*' | '/') expr        # MulDivExpr
-    | expr ('+' | '-') expr        # AddSubExpr
-    | 'sin' '(' expr ')'           # SinExpr
-    | 'cos' '(' expr ')'           # CosExpr
-    | 'tan' '(' expr ')'           # TanExpr
-    | INT                          # IntExpr
-    | ID                           # IdExpr
-    | '(' expr ')'                 # ParensExpr
-    ;
+  : expr ('+' | '-') expr          # AddSubExpr
+  | expr ('*'|'/') expr            # MulDivExpr
+  | INT                            # IntExpr
+  | ID                             # IdExpr
+  | 'cos' '(' expr ')'             # CosExpr
+  | 'sin' ( '(' expr ')' )         # SinExpr
+  | '(' expr ')'                   # ParensExpr
+  | 'tan' '(' expr ')'             # TanExpr
+  ;
 
-STRING: '"' .*? '"';
-ID: [a-zA-Z_][a-zA-Z0-9_]*;
-INT: [0-9]+;
-WS: [ \t\r\n]+ -> skip;
+assignment
+  : ID '=' expr
+  ;
+
+ifStmt
+  : 'if' '(' condition ')' '{' statement* '}'
+  ;
+
+forStmt
+  : 'for' '(' assignment ';' condition ';' assignment ')' '{' statement* '}'
+  ;
+
+whileStmt
+  : 'while' '(' condition ')' '{' statement* '}'
+  ;
+
+condition
+  : expr comparisonOp expr
+  ;
+
+comparisonOp
+  : '<' | '>' | '<=' | '>=' | '==' | '!='
+  ;
+
+STRING : '"' .*? '"' ;
+ID     : [a-zA-Z_] [a-zA-Z_0-9]* ;
+INT    : [0-9]+ ;
+WS     : [ \t\n\r]+ -> skip ;

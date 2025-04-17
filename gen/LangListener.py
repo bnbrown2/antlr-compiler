@@ -44,60 +44,6 @@ class LangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by LangParser#assignment.
-    def enterAssignment(self, ctx:LangParser.AssignmentContext):
-        pass
-
-    # Exit a parse tree produced by LangParser#assignment.
-    def exitAssignment(self, ctx:LangParser.AssignmentContext):
-        pass
-
-
-    # Enter a parse tree produced by LangParser#ifStmt.
-    def enterIfStmt(self, ctx:LangParser.IfStmtContext):
-        pass
-
-    # Exit a parse tree produced by LangParser#ifStmt.
-    def exitIfStmt(self, ctx:LangParser.IfStmtContext):
-        pass
-
-
-    # Enter a parse tree produced by LangParser#forStmt.
-    def enterForStmt(self, ctx:LangParser.ForStmtContext):
-        pass
-
-    # Exit a parse tree produced by LangParser#forStmt.
-    def exitForStmt(self, ctx:LangParser.ForStmtContext):
-        pass
-
-
-    # Enter a parse tree produced by LangParser#whileStmt.
-    def enterWhileStmt(self, ctx:LangParser.WhileStmtContext):
-        pass
-
-    # Exit a parse tree produced by LangParser#whileStmt.
-    def exitWhileStmt(self, ctx:LangParser.WhileStmtContext):
-        pass
-
-
-    # Enter a parse tree produced by LangParser#condition.
-    def enterCondition(self, ctx:LangParser.ConditionContext):
-        pass
-
-    # Exit a parse tree produced by LangParser#condition.
-    def exitCondition(self, ctx:LangParser.ConditionContext):
-        pass
-
-
-    # Enter a parse tree produced by LangParser#comparisonOp.
-    def enterComparisonOp(self, ctx:LangParser.ComparisonOpContext):
-        pass
-
-    # Exit a parse tree produced by LangParser#comparisonOp.
-    def exitComparisonOp(self, ctx:LangParser.ComparisonOpContext):
-        pass
-
-
     # Enter a parse tree produced by LangParser#MulDivExpr.
     def enterMulDivExpr(self, ctx:LangParser.MulDivExprContext):
         pass
@@ -167,6 +113,60 @@ class LangListener(ParseTreeListener):
 
     # Exit a parse tree produced by LangParser#AddSubExpr.
     def exitAddSubExpr(self, ctx:LangParser.AddSubExprContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#assignment.
+    def enterAssignment(self, ctx:LangParser.AssignmentContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#assignment.
+    def exitAssignment(self, ctx:LangParser.AssignmentContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#ifStmt.
+    def enterIfStmt(self, ctx:LangParser.IfStmtContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#ifStmt.
+    def exitIfStmt(self, ctx:LangParser.IfStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#forStmt.
+    def enterForStmt(self, ctx:LangParser.ForStmtContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#forStmt.
+    def exitForStmt(self, ctx:LangParser.ForStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#whileStmt.
+    def enterWhileStmt(self, ctx:LangParser.WhileStmtContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#whileStmt.
+    def exitWhileStmt(self, ctx:LangParser.WhileStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#condition.
+    def enterCondition(self, ctx:LangParser.ConditionContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#condition.
+    def exitCondition(self, ctx:LangParser.ConditionContext):
+        pass
+
+
+    # Enter a parse tree produced by LangParser#comparisonOp.
+    def enterComparisonOp(self, ctx:LangParser.ComparisonOpContext):
+        pass
+
+    # Exit a parse tree produced by LangParser#comparisonOp.
+    def exitComparisonOp(self, ctx:LangParser.ComparisonOpContext):
         pass
 
 
